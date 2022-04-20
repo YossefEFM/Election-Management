@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,7 +36,7 @@ namespace Election_Management_System
                 cmd.Parameters.Add("Pass", Pass_txt.Text);
                 cmd.Parameters.Add("BAddress", Address_txt.Text);
                 cmd.Parameters.Add("BDate", Birth_txt.Text);
-                cmd.ExcuteNonQuery();
+                cmd.ExecuteNonQuery();
                 MessageBox.Show("Rigesteration Done");
             }
             else
