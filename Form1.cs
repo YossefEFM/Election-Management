@@ -36,7 +36,7 @@ namespace Election_Management_System
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                comboBox1.Items.Add(dr[1]);
+                comboBox1.Items.Add(dr[0]);
             }
             dr.Close();
         }

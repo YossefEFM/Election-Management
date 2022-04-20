@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,15 +38,15 @@ namespace Election_Management_System
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", Id_txt.Text);
             cmd.Parameters.Add("Pass", Pass_txt.Text);
-            String dr = cmd.ExcuteNonQuery();
+            OracleDataReader dr = cmd.ExecuteReader();
             
-                if(dr.Equals("Admin"))
+                if(dr[0].Equals("Admin"))
                 {
                     admin ad = new admin();
                     this.Close();
                     ad.Show();
                 }
-                else if(dr.Equals("Committee"))
+                else if(dr[0].Equals("Committee"))
                 {
                     Commitee comm = new Commitee();
                     this.Close();
@@ -53,7 +54,6 @@ namespace Election_Management_System
                 }
                 else
                 {
-
                     Actor form = new Actor();
                     this.Close();
                     form.Show();
@@ -69,8 +69,9 @@ namespace Election_Management_System
         private void SignUp_btn_Click(object sender, EventArgs e)
         {
             SignUp reg = new SignUp();
-            this.Close();
-            reg.Show();
+            reg.Visible = true;
+
+            this.Visible = false;
         }
     }
 }
