@@ -46,5 +46,10 @@ namespace Election_Management_System
             }
             
         }
+
+        private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
+        }
     }
 }

@@ -176,6 +176,7 @@
             this.Controls.Add(this.Add_btn);
             this.Name = "Addcandidates";
             this.Text = "Addcandidates";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Addcandidates_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

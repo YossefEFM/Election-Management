@@ -57,7 +57,7 @@ namespace Election_Management_System
             cmd.Parameters.Add("BAddress", Address_txt.Text);
             cmd.Parameters.Add("BDate", BD_txt.Text);
             cmd.ExecuteNonQuery();
-            conn2.Close();
+         
 
             conn3 = new OracleConnection(ordb);
             conn3.Open();
@@ -69,7 +69,7 @@ namespace Election_Management_System
             cmd1.CommandType = CommandType.Text;
             cmd1.Parameters.Add("id", ID_cmb.SelectedItem);
             cmd1.ExecuteNonQuery();
-            conn3.Close();
+            
 
 
         }
@@ -92,6 +92,14 @@ namespace Election_Management_System
                 Address_txt.Text=dr[4].ToString();
             }
             dr.Close ();   
+        }
+
+        private void userconfirmattion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+             conn.Dispose();
+             conn1.Dispose();
+             conn2.Dispose();
+             conn3.Dispose();
         }
     }
 }

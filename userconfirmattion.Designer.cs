@@ -167,6 +167,7 @@
             this.Controls.Add(this.Approve_btn);
             this.Name = "userconfirmattion";
             this.Text = "userconfirmattion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.userconfirmattion_FormClosing);
             this.Load += new System.EventHandler(this.userconfirmattion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

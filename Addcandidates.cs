@@ -38,5 +38,10 @@ namespace Election_Management_System
             cmd.Parameters.Add("Business", Bus_txt.Text);
             cmd.ExecuteNonQuery();
         }
+
+        private void Addcandidates_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
+        }
     }
 }

@@ -49,7 +49,7 @@ namespace Election_Management_System
                 }
                 else
                 {
-                    Actor form = new Actor();
+                    candidates form = new candidates();
                     this.Close();
                     form.Show();
                 }
@@ -61,6 +61,11 @@ namespace Election_Management_System
             reg.Visible = true;
 
             this.Visible = false;
+        }
+
+        private void SignIN_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
         }
     }
 }

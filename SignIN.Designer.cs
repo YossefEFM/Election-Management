@@ -113,6 +113,7 @@
             this.Controls.Add(this.SignIn_btn);
             this.Name = "SignIN";
             this.Text = "SignIN";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignIN_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

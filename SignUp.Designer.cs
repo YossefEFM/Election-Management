@@ -188,6 +188,7 @@
             this.Controls.Add(this.Rigester_btn);
             this.Name = "SignUp";
             this.Text = "SignUp";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUp_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
