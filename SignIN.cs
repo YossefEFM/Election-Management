@@ -1,8 +1,9 @@
-﻿using Oracle.DataAccess.Client;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OracleClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,12 +21,6 @@ namespace Election_Management_System
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-     
-        
         private void SignIn_btn_Click(object sender, EventArgs e)
         {
 
@@ -60,12 +55,6 @@ namespace Election_Management_System
                 }
             
         }
-
-        private void SignIN_Load(object sender, EventArgs e)
-        {
-          
-        }
-
         private void SignUp_btn_Click(object sender, EventArgs e)
         {
             SignUp reg = new SignUp();

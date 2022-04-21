@@ -60,7 +60,6 @@
             this.label1.Size = new System.Drawing.Size(99, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "National ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -114,7 +113,6 @@
             this.Controls.Add(this.SignIn_btn);
             this.Name = "SignIN";
             this.Text = "SignIN";
-            this.Load += new System.EventHandler(this.SignIN_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
