@@ -43,7 +43,6 @@ namespace Election_Management_System
 
         private void Approve_btn_Click(object sender, EventArgs e)
         {
-            String Password;
             conn2 = new OracleConnection(ordb);
             conn2.Open();
 
