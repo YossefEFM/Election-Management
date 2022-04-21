@@ -30,7 +30,7 @@ namespace Election_Management_System
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "insert into Users values (:id , :name , :password , :BAddress , :BDate) ";
+                cmd.CommandText = "insert into NUsers values (:id , :name , :password , :BAddress , :BDate) ";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add("id", ID_txt.Text);
                 cmd.Parameters.Add("name", Name_txt.Text);
@@ -38,7 +38,7 @@ namespace Election_Management_System
                 cmd.Parameters.Add("BAddress", Address_txt.Text);
                 cmd.Parameters.Add("BDate", Birth_txt.Text);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Rigesteration Done");
+                MessageBox.Show("Rigesteration done to confirm");
             }
             else
             {
