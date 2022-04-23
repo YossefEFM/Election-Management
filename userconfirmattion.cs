@@ -30,7 +30,7 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select ID from NUsers";
+            cmd.CommandText = "select ID from Users where Notconfirmed = Yes";
             cmd.CommandType = CommandType.Text;
 
             OracleDataReader dr = cmd.ExecuteReader();

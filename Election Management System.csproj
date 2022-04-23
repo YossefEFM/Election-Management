@@ -57,17 +57,23 @@
     <Compile Include="Addcandidates.Designer.cs">
       <DependentUpon>Addcandidates.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddnewCandidates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddnewCandidates.Designer.cs">
+      <DependentUpon>AddnewCandidates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Commitee.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Commitee.Designer.cs">
       <DependentUpon>Commitee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="displaycandidates.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="displaycandidates.Designer.cs">
+      <DependentUpon>displaycandidates.cs</DependentUpon>
     </Compile>
     <Compile Include="Admin.cs">
       <SubType>Form</SubType>
@@ -98,8 +104,11 @@
     <EmbeddedResource Include="Addcandidates.resx">
       <DependentUpon>Addcandidates.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="AddnewCandidates.resx">
+      <DependentUpon>AddnewCandidates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="displaycandidates.resx">
+      <DependentUpon>displaycandidates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin.resx">
       <DependentUpon>Admin.cs</DependentUpon>

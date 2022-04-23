@@ -30,13 +30,14 @@ namespace Election_Management_System
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "insert into NUsers values (:id , :name , :password , :BAddress , :BDate) ";
+                cmd.CommandText = "insert into NUsers values (:id , :name , :password , :BAddress , :BDate , :Notconfirmed) ";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add("id", ID_txt.Text);
                 cmd.Parameters.Add("name", Name_txt.Text);
                 cmd.Parameters.Add("Pass", Pass_txt.Text);
                 cmd.Parameters.Add("BAddress", Address_txt.Text);
                 cmd.Parameters.Add("BDate", Birth_txt.Text);
+                cmd.Parameters.Add("Notconfirmed", "Yes");
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Rigesteration done to confirm");
             }

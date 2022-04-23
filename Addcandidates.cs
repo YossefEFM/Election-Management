@@ -37,6 +37,7 @@ namespace Election_Management_System
             cmd.Parameters.Add("Electoralcode", EC_txt.Text);
             cmd.Parameters.Add("Business", Bus_txt.Text);
             cmd.ExecuteNonQuery();
+            
         }
 
         private void Addcandidates_FormClosing(object sender, FormClosingEventArgs e)
