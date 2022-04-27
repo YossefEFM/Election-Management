@@ -1,6 +1,6 @@
 ﻿namespace Election_Management_System
 {
-    partial class candidates
+    partial class DisCandidates
     {
         /// <summary>
         /// Required designer variable.
@@ -123,6 +123,7 @@
             // BD_txt
             // 
             this.BD_txt.AutoSize = true;
+            this.BD_txt.BackColor = System.Drawing.Color.Snow;
             this.BD_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BD_txt.Location = new System.Drawing.Point(186, 95);
             this.BD_txt.Name = "BD_txt";
@@ -132,6 +133,7 @@
             // Add_txt
             // 
             this.Add_txt.AutoSize = true;
+            this.Add_txt.BackColor = System.Drawing.Color.Snow;
             this.Add_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add_txt.Location = new System.Drawing.Point(186, 167);
             this.Add_txt.Name = "Add_txt";
@@ -141,6 +143,7 @@
             // Elc_txt
             // 
             this.Elc_txt.AutoSize = true;
+            this.Elc_txt.BackColor = System.Drawing.Color.Snow;
             this.Elc_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Elc_txt.Location = new System.Drawing.Point(186, 229);
             this.Elc_txt.Name = "Elc_txt";
@@ -150,6 +153,7 @@
             // Bus_txt
             // 
             this.Bus_txt.AutoSize = true;
+            this.Bus_txt.BackColor = System.Drawing.Color.Snow;
             this.Bus_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bus_txt.Location = new System.Drawing.Point(186, 302);
             this.Bus_txt.Name = "Bus_txt";
@@ -158,30 +162,33 @@
             // 
             // Display_btn
             // 
+            this.Display_btn.BackColor = System.Drawing.Color.Salmon;
             this.Display_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Display_btn.Location = new System.Drawing.Point(465, 209);
             this.Display_btn.Name = "Display_btn";
             this.Display_btn.Size = new System.Drawing.Size(191, 61);
             this.Display_btn.TabIndex = 13;
             this.Display_btn.Text = "Search by constituency";
-            this.Display_btn.UseVisualStyleBackColor = true;
+            this.Display_btn.UseVisualStyleBackColor = false;
             this.Display_btn.Click += new System.EventHandler(this.Display_btn_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Salmon;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(465, 132);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(191, 55);
             this.button1.TabIndex = 14;
             this.button1.Text = "Search by name";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // candidates
+            // DisCandidates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PeachPuff;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Display_btn);
@@ -197,8 +204,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.Cons_cmb);
-            this.Name = "candidates";
+            this.Name = "DisCandidates";
             this.Text = "Candidates";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DisCandidates_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

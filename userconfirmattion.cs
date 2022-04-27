@@ -15,9 +15,6 @@ namespace Election_Management_System
     {
         string ordb = "Data Source=orcl;User Id=scott;password=tiger;";
         OracleConnection conn;
-        OracleConnection conn1;
-        OracleConnection conn2;
-        OracleConnection conn3;
         public userconfirmattion()
         {
             InitializeComponent();
@@ -43,12 +40,12 @@ namespace Election_Management_System
 
         private void Approve_btn_Click(object sender, EventArgs e)
         {
-            conn2 = new OracleConnection(ordb);
-            conn2.Open();
+            conn = new OracleConnection(ordb);
+            conn.Open();
 
             OracleCommand cmd = new OracleCommand();
            
-            cmd.Connection = conn2;
+            cmd.Connection = conn;
             cmd.CommandText = "insert into Users values (:id , :name , :password , :BAddress , :BDate)";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", ID_cmb.SelectedItem);
@@ -58,28 +55,18 @@ namespace Election_Management_System
             cmd.Parameters.Add("BDate", BD_txt.Text);
             cmd.ExecuteNonQuery();
          
-
-            conn3 = new OracleConnection(ordb);
-            conn3.Open();
-
-            OracleCommand cmd1 = new OracleCommand();
-
-            cmd1.Connection = conn3;
-            cmd1.CommandText = "Delete from NUsers ID=:id";
-            cmd1.CommandType = CommandType.Text;
-            cmd1.Parameters.Add("id", ID_cmb.SelectedItem);
-            cmd1.ExecuteNonQuery();
-            
-
-
+            cmd.CommandText = "Delete from NUsers ID=:id";
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("id", ID_cmb.SelectedItem);
+            cmd.ExecuteNonQuery();
         }
 
         private void Show_btn_Click(object sender, EventArgs e)
         {
-            conn1 = new OracleConnection(ordb);
-            conn1.Open ();
+            conn = new OracleConnection(ordb);
+            conn.Open ();
             OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn1;
+            cmd.Connection = conn;
             cmd.CommandText = "select ID , Name , Password , Birthdate , Address from NUsers where ID=:id";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", ID_cmb.SelectedItem);
@@ -96,10 +83,7 @@ namespace Election_Management_System
 
         private void userconfirmattion_FormClosing(object sender, FormClosingEventArgs e)
         {
-             conn.Dispose();
-             conn1.Dispose();
-             conn2.Dispose();
-             conn3.Dispose();
+             conn.Dispose();   
         }
     }
 }

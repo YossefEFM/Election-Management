@@ -51,12 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Addcandidates.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Addcandidates.Designer.cs">
-      <DependentUpon>Addcandidates.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddnewCandidates.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,15 +89,24 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
     <Compile Include="userconfirmattion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="userconfirmattion.Designer.cs">
       <DependentUpon>userconfirmattion.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Addcandidates.resx">
-      <DependentUpon>Addcandidates.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Vote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vote.Designer.cs">
+      <DependentUpon>Vote.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddnewCandidates.resx">
       <DependentUpon>AddnewCandidates.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,8 +131,14 @@
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userconfirmattion.resx">
       <DependentUpon>userconfirmattion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vote.resx">
+      <DependentUpon>Vote.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

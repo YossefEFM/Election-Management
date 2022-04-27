@@ -14,14 +14,11 @@ using System.Windows.Forms;
 
 namespace Election_Management_System
 {
-    public partial class candidates : Form
+    public partial class DisCandidates : Form
     {
         string ordb = "Data Source=orcl;User Id=scott;password=tiger;";
         OracleConnection conn;
-        OracleConnection conn1;
-        OracleConnection conn2;
-
-        public candidates()
+        public DisCandidates()
         {
             InitializeComponent();
         }
@@ -46,11 +43,11 @@ namespace Election_Management_System
  private void Display_btn_Click(object sender, EventArgs e)
         {
 
-            conn1 = new OracleConnection(ordb);
-            conn1.Open();
+            conn = new OracleConnection(ordb);
+            conn.Open();
 
             OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn1;
+            cmd.Connection = conn;
             cmd.CommandText = "select * from Candidates where Constituency =:Con ";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("Con",Cons_cmb.SelectedItem.ToString());
@@ -68,11 +65,11 @@ namespace Election_Management_System
         }
          private void button1_Click(object sender, EventArgs e)
         {
-            conn2 = new OracleConnection(ordb);
-            conn2.Open();
+            conn = new OracleConnection(ordb);
+            conn.Open();
 
             OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn2;
+            cmd.Connection = conn;
             cmd.CommandText = "select * from Candidates where Name =:name ";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
@@ -91,8 +88,11 @@ namespace Election_Management_System
         private void candidates_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
-            conn1.Dispose();
-            conn2.Dispose();
+        }
+
+        private void DisCandidates_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
         }
     }
 }

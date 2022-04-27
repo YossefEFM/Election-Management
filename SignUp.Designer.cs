@@ -46,13 +46,14 @@
             // 
             // Rigester_btn
             // 
+            this.Rigester_btn.BackColor = System.Drawing.Color.SandyBrown;
             this.Rigester_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Rigester_btn.Location = new System.Drawing.Point(308, 394);
             this.Rigester_btn.Name = "Rigester_btn";
             this.Rigester_btn.Size = new System.Drawing.Size(128, 44);
             this.Rigester_btn.TabIndex = 0;
             this.Rigester_btn.Text = "Rigester";
-            this.Rigester_btn.UseVisualStyleBackColor = true;
+            this.Rigester_btn.UseVisualStyleBackColor = false;
             this.Rigester_btn.Click += new System.EventHandler(this.Rigester_btn_Click);
             // 
             // label1
@@ -107,45 +108,57 @@
             // 
             // Name_txt
             // 
+            this.Name_txt.BackColor = System.Drawing.Color.SeaShell;
+            this.Name_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_txt.Location = new System.Drawing.Point(215, 64);
             this.Name_txt.Name = "Name_txt";
-            this.Name_txt.Size = new System.Drawing.Size(308, 20);
+            this.Name_txt.Size = new System.Drawing.Size(308, 24);
             this.Name_txt.TabIndex = 6;
             // 
             // ID_txt
             // 
+            this.ID_txt.BackColor = System.Drawing.Color.SeaShell;
+            this.ID_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID_txt.Location = new System.Drawing.Point(215, 113);
             this.ID_txt.Name = "ID_txt";
-            this.ID_txt.Size = new System.Drawing.Size(308, 20);
+            this.ID_txt.Size = new System.Drawing.Size(308, 24);
             this.ID_txt.TabIndex = 7;
             // 
             // Pass_txt
             // 
+            this.Pass_txt.BackColor = System.Drawing.Color.SeaShell;
+            this.Pass_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pass_txt.Location = new System.Drawing.Point(215, 162);
             this.Pass_txt.Name = "Pass_txt";
-            this.Pass_txt.Size = new System.Drawing.Size(308, 20);
+            this.Pass_txt.Size = new System.Drawing.Size(308, 24);
             this.Pass_txt.TabIndex = 8;
             // 
             // ConPass_txt
             // 
+            this.ConPass_txt.BackColor = System.Drawing.Color.SeaShell;
+            this.ConPass_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConPass_txt.Location = new System.Drawing.Point(215, 214);
             this.ConPass_txt.Name = "ConPass_txt";
-            this.ConPass_txt.Size = new System.Drawing.Size(308, 20);
+            this.ConPass_txt.Size = new System.Drawing.Size(308, 24);
             this.ConPass_txt.TabIndex = 9;
             // 
             // Birth_txt
             // 
+            this.Birth_txt.BackColor = System.Drawing.Color.SeaShell;
+            this.Birth_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Birth_txt.Location = new System.Drawing.Point(215, 265);
             this.Birth_txt.Name = "Birth_txt";
-            this.Birth_txt.Size = new System.Drawing.Size(308, 20);
+            this.Birth_txt.Size = new System.Drawing.Size(308, 24);
             this.Birth_txt.TabIndex = 10;
             this.Birth_txt.Text = "dd/mo/year";
             // 
             // Address_txt
             // 
+            this.Address_txt.BackColor = System.Drawing.Color.SeaShell;
+            this.Address_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Address_txt.Location = new System.Drawing.Point(215, 348);
             this.Address_txt.Name = "Address_txt";
-            this.Address_txt.Size = new System.Drawing.Size(308, 20);
+            this.Address_txt.Size = new System.Drawing.Size(308, 24);
             this.Address_txt.TabIndex = 11;
             // 
             // label6
@@ -171,6 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);

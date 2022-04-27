@@ -49,7 +49,8 @@ namespace Election_Management_System
                 }
                 else
                 {
-                    candidates form = new candidates();
+                    Users form = new Users();
+                    form.signed(1 , Id_txt.Text );
                     this.Close();
                     form.Show();
                 }

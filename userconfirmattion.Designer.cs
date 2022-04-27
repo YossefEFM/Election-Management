@@ -43,13 +43,14 @@
             // 
             // Approve_btn
             // 
+            this.Approve_btn.BackColor = System.Drawing.Color.SeaShell;
             this.Approve_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Approve_btn.Location = new System.Drawing.Point(156, 369);
             this.Approve_btn.Name = "Approve_btn";
             this.Approve_btn.Size = new System.Drawing.Size(209, 49);
             this.Approve_btn.TabIndex = 1;
             this.Approve_btn.Text = "Approve";
-            this.Approve_btn.UseVisualStyleBackColor = true;
+            this.Approve_btn.UseVisualStyleBackColor = false;
             this.Approve_btn.Click += new System.EventHandler(this.Approve_btn_Click);
             // 
             // ID_cmb
@@ -130,13 +131,14 @@
             // 
             // Show_btn
             // 
+            this.Show_btn.BackColor = System.Drawing.Color.SeaShell;
             this.Show_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Show_btn.Location = new System.Drawing.Point(426, 369);
             this.Show_btn.Name = "Show_btn";
             this.Show_btn.Size = new System.Drawing.Size(198, 49);
             this.Show_btn.TabIndex = 10;
             this.Show_btn.Text = "Show info";
-            this.Show_btn.UseVisualStyleBackColor = true;
+            this.Show_btn.UseVisualStyleBackColor = false;
             this.Show_btn.Click += new System.EventHandler(this.Show_btn_Click);
             // 
             // Password_txt
@@ -144,15 +146,15 @@
             this.Password_txt.AutoSize = true;
             this.Password_txt.Location = new System.Drawing.Point(153, 301);
             this.Password_txt.Name = "Password_txt";
-            this.Password_txt.Size = new System.Drawing.Size(35, 13);
+            this.Password_txt.Size = new System.Drawing.Size(0, 13);
             this.Password_txt.TabIndex = 11;
-            this.Password_txt.Text = "label3";
             this.Password_txt.Visible = false;
             // 
             // userconfirmattion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Password_txt);
             this.Controls.Add(this.Show_btn);
