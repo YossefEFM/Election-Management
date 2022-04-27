@@ -25,7 +25,7 @@ namespace Election_Management_System
         private void AddnewCandidates_Load(object sender, EventArgs e)
         {
             string ordb = "Data Source=orcl;User Id=scott;password=tiger;";
-            string cmdstr = "Select * from Users where Notconfirmed=Yes";
+            string cmdstr = "Select * from Candidates";
             adapter = new OracleDataAdapter(ordb, cmdstr);
             set = new DataSet();
             adapter.Fill(set);
