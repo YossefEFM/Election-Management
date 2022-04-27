@@ -30,7 +30,7 @@ namespace Election_Management_System
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "insert into Users values (:id , :name , :password , :BAddress , :BDate , :Notconfirmed :signed) ";
+                cmd.CommandText = "insert into Users values (:id , :name , :password , :BAddress , :BDate , :Notconfirmed , :signed) ";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add("id", ID_txt.Text);
                 cmd.Parameters.Add("name", Name_txt.Text);
