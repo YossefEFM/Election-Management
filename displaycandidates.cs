@@ -14,11 +14,11 @@ using System.Windows.Forms;
 
 namespace Election_Management_System
 {
-    public partial class DisCandidates : Form
+    public partial class Candidates : Form
     {
         string ordb = "Data Source=orcl;User Id=scott;password=tiger;";
         OracleConnection conn;
-        public DisCandidates()
+        public Candidates()
         {
             InitializeComponent();
         }
