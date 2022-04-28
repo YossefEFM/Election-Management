@@ -37,7 +37,7 @@ namespace Election_Management_System
             
                 if(dr[0].Equals("Admin"))
                 {
-                    admin ad = new admin();
+                    admin ad = new admin(Convert.ToInt32(Id_txt.Text.ToString()));
                     this.Close();
                     ad.Show();
                 }
@@ -54,6 +54,7 @@ namespace Election_Management_System
                     this.Close();
                     form.Show();
                 }
+            dr.Close();
             
         }
         private void SignUp_btn_Click(object sender, EventArgs e)

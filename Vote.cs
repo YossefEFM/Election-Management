@@ -94,7 +94,7 @@ namespace Election_Management_System
                 dr.Close();
                 num++;
                 
-                cmd.CommandText = "insert into voting values (:Name , :Zone  , :Electoralcode , :Numberofvoting)";
+                cmd.CommandText = "insert into votingvalues (:Name , :Zone  , :Electoralcode , :Numberofvoting)";
                 cmd.Parameters.Add("Name", Name_cmb.SelectedItem.ToString());
                 cmd.Parameters.Add("Electoralcode", Sh_lbl.Text);
                 cmd.Parameters.Add("Zone", add);
