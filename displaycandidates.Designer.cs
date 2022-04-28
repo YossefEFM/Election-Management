@@ -1,6 +1,6 @@
 ﻿namespace Election_Management_System
 {
-    partial class DisCandidates
+    partial class Candidates
     {
         /// <summary>
         /// Required designer variable.
@@ -184,7 +184,7 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // DisCandidates
+            // Candidates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,7 +204,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.Cons_cmb);
-            this.Name = "DisCandidates";
+            this.Name = "Candidates";
             this.Text = "Candidates";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DisCandidates_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);

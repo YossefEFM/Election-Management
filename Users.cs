@@ -86,7 +86,7 @@ namespace Election_Management_System
             }
             else if(choice.Equals("View Candidates"))
             {
-                DisCandidates form = new DisCandidates();
+                Candidates form = new Candidates();
                 form.Show();
             }
         }
