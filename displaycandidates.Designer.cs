@@ -204,7 +204,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.Cons_cmb);
-            this.Name = "Candidates";
+            // this.Name = "Candidates";
             this.Text = "Candidates";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DisCandidates_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
