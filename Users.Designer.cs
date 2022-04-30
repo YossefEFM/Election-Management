@@ -37,7 +37,7 @@
             // 
             // Go_btn
             // 
-            this.Go_btn.BackColor = System.Drawing.Color.Salmon;
+            this.Go_btn.BackColor = System.Drawing.Color.Linen;
             this.Go_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Go_btn.Location = new System.Drawing.Point(394, 93);
             this.Go_btn.Name = "Go_btn";
@@ -51,11 +51,11 @@
             // 
             this.Signed_lbl.AutoSize = true;
             this.Signed_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Signed_lbl.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Signed_lbl.Location = new System.Drawing.Point(660, 16);
             this.Signed_lbl.Name = "Signed_lbl";
-            this.Signed_lbl.Size = new System.Drawing.Size(57, 20);
+            this.Signed_lbl.Size = new System.Drawing.Size(0, 20);
             this.Signed_lbl.TabIndex = 1;
-            this.Signed_lbl.Text = "label1";
             // 
             // Action_cmb
             // 
@@ -86,6 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Purple;
             this.label3.Location = new System.Drawing.Point(7, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(781, 20);
@@ -97,7 +98,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(953, 525);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
