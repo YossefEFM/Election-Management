@@ -14,7 +14,7 @@ namespace Election_Management_System
     public partial class admin : Form
     {
         int Id;
-        string ordb = "Data Source=orcl;User Id=scott;password=tiger;";
+        string ordb = "Data Source = orcl ; User Id = SCOTT ; password = tiger;";
         OracleConnection conn;
         public admin(int id)
         {

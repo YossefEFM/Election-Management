@@ -14,7 +14,7 @@ namespace Election_Management_System
 {
     public partial class SignUp : Form
     {
-        string ordb = "Data Source=orcl;User Id=scott;password=tiger;";
+        string ordb = "Data Source = orcl ; User Id=SCOTT; password = tiger;";
         OracleConnection conn;
         public SignUp()
         {
@@ -30,17 +30,17 @@ namespace Election_Management_System
             {
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "insert into Users values (:id , :name , :password , :BAddress , :BDate , :Notconfirmed , :signed , :Voted) ";
+                cmd.CommandText = @"insert into Users values (:id , :name , :password , :BAddress , :BDate , :Notconfirmed , :signed , :Voted) ";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Add("id", ID_txt.Text);
                 cmd.Parameters.Add("name", Name_txt.Text);
                 cmd.Parameters.Add("Pass", Pass_txt.Text);
                 cmd.Parameters.Add("BAddress", Address_txt.Text);
-                cmd.Parameters.Add("BDate", Birth_txt.Text);
+                cmd.Parameters.Add("BDate", Convert.ToDateTime(Birth_txt.Text.ToString()));
                 cmd.Parameters.Add("Notconfirmed", "Yes");
                 cmd.Parameters.Add("Notconfirmed", "Signed Out");
                 cmd.Parameters.Add("Voted", "NotVoted");
-                cmd.ExecuteNonQuery();
+                int x = cmd.ExecuteNonQuery();
                 MessageBox.Show("Rigesteration done to confirm");
             }
             else

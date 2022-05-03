@@ -90,7 +90,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(38, 214);
+            this.label4.Location = new System.Drawing.Point(38, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 20);
             this.label4.TabIndex = 4;
@@ -100,7 +100,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(39, 272);
+            this.label5.Location = new System.Drawing.Point(43, 276);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 5;
@@ -119,7 +119,7 @@
             // 
             this.ID_txt.BackColor = System.Drawing.Color.SeaShell;
             this.ID_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID_txt.Location = new System.Drawing.Point(215, 113);
+            this.ID_txt.Location = new System.Drawing.Point(215, 119);
             this.ID_txt.Name = "ID_txt";
             this.ID_txt.Size = new System.Drawing.Size(308, 24);
             this.ID_txt.TabIndex = 7;
@@ -128,7 +128,7 @@
             // 
             this.Pass_txt.BackColor = System.Drawing.Color.SeaShell;
             this.Pass_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pass_txt.Location = new System.Drawing.Point(215, 162);
+            this.Pass_txt.Location = new System.Drawing.Point(215, 166);
             this.Pass_txt.Name = "Pass_txt";
             this.Pass_txt.Size = new System.Drawing.Size(308, 24);
             this.Pass_txt.TabIndex = 8;
@@ -137,7 +137,7 @@
             // 
             this.ConPass_txt.BackColor = System.Drawing.Color.SeaShell;
             this.ConPass_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConPass_txt.Location = new System.Drawing.Point(215, 214);
+            this.ConPass_txt.Location = new System.Drawing.Point(215, 223);
             this.ConPass_txt.Name = "ConPass_txt";
             this.ConPass_txt.Size = new System.Drawing.Size(308, 24);
             this.ConPass_txt.TabIndex = 9;
@@ -146,7 +146,7 @@
             // 
             this.Birth_txt.BackColor = System.Drawing.Color.SeaShell;
             this.Birth_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Birth_txt.Location = new System.Drawing.Point(215, 265);
+            this.Birth_txt.Location = new System.Drawing.Point(215, 276);
             this.Birth_txt.Name = "Birth_txt";
             this.Birth_txt.Size = new System.Drawing.Size(308, 24);
             this.Birth_txt.TabIndex = 10;
@@ -175,7 +175,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(211, 185);
+            this.label7.Location = new System.Drawing.Point(211, 191);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 20);
             this.label7.TabIndex = 13;
