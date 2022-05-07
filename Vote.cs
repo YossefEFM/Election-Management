@@ -34,7 +34,7 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "Select Name from Candidates where Constitueny = :Zone";
+            cmd.CommandText = "Select CANDNAME from Candidates where GOVERNORATE = :Zone";
             cmd.Parameters.Add("Zone", add);
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
@@ -42,15 +42,16 @@ namespace Election_Management_System
             {
                 Name_cmb.Items.Add(dr[0]);
             }
-            dr.Close();
+            
           
-            cmd.CommandText = "Select Name from Users where ID = :id";
+            cmd.CommandText = "Select USERNAME from Users where ID = :id";
             cmd.Parameters.Add("id", Nid);
             cmd.CommandType = CommandType.Text;
-            OracleDataReader dr1 = cmd.ExecuteReader();
-            uname = dr[0].ToString();
-            Welcome.Text = "Welcome" + dr[0].ToString();
-            dr.Close();
+            OracleDataReader ex = cmd.ExecuteReader();
+            ex.Read();
+            uname = ex[0].ToString();
+            Welcome.Text = "Welcome" + ex[0].ToString();
+            dr.Close();ex.Close();
 
         }
 
@@ -62,7 +63,7 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "Select Electoralcode , Business from Candidates where Name= :name";
+            cmd.CommandText = "Select Electoralcode , Business from Candidates where CANDNAME= :name";
             cmd.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
@@ -80,21 +81,21 @@ namespace Election_Management_System
                 conn.Open();
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = "Select Voted from Users where Name = :name";
+                cmd.CommandText = "Select Voted from Users where USERNAME = :name";
                 cmd.Parameters.Add("name", uname);
                 OracleDataReader dr0 = cmd.ExecuteReader();
                 String voted = dr0[0].ToString();
                 dr0.Close();
                 if(voted.Equals("NotVoted"))
                 {
-                cmd.CommandText = "Select Numberofvoting from voting where Name = :name ";
+                cmd.CommandText = "Select Numberofvotes from VOTINGVALUES where CANDNAME = :name ";
                 cmd.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
                 OracleDataReader dr = cmd.ExecuteReader();
                 int num = Convert.ToInt32(dr[0].ToString());
                 dr.Close();
                 num++;
                 
-                cmd.CommandText = "insert into votingvalues (:Name , :Zone  , :Electoralcode , :Numberofvoting)";
+                cmd.CommandText = "insert into votingvalues (:Name , :Electoralcode , :Zone , :Numberofvoting)";
                 cmd.Parameters.Add("Name", Name_cmb.SelectedItem.ToString());
                 cmd.Parameters.Add("Electoralcode", Sh_lbl.Text);
                 cmd.Parameters.Add("Zone", add);

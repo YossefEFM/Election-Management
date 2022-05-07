@@ -108,7 +108,6 @@
             this.Name = "Users";
             this.Text = "User";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Users_FormClosing);
-            this.Load += new System.EventHandler(this.Users_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

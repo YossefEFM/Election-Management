@@ -150,7 +150,7 @@
             this.Birth_txt.Name = "Birth_txt";
             this.Birth_txt.Size = new System.Drawing.Size(308, 24);
             this.Birth_txt.TabIndex = 10;
-            this.Birth_txt.Text = "dd/mo/year";
+            this.Birth_txt.Text = "dd-mo-year";
             // 
             // Address_txt
             // 

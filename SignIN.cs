@@ -29,28 +29,28 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select title from Users where National_ID=:id and Password =:Pass";
+            cmd.CommandText = @"select JOBTITLE from USERS where ID=:id and Password =:Pass";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", Id_txt.Text);
             cmd.Parameters.Add("Pass", Pass_txt.Text);
             OracleDataReader dr = cmd.ExecuteReader();
-            
-                if(dr[0].Equals("Admin"))
+            dr.Read();
+            string title = dr[0].ToString();
+                if (title.Equals("A"))
                 {
                     admin ad = new admin(Convert.ToInt32(Id_txt.Text.ToString()));
                     this.Close();
                     ad.Show();
                 }
-                else if(dr[0].Equals("Committee"))
+                else if(title.Equals("C"))
                 {
-                    Commitee comm = new Commitee();
+                    Commitee comm = new Commitee(Id_txt.ToString());
                     this.Close();
                     comm.Show();
                 }
-                else
-                {
-                    Users form = new Users();
-                    form.signed(1 , Id_txt.Text );
+                else if (title.Equals("V"))
+            {
+                    Users form = new Users(1 , Id_txt.Text);
                     this.Close();
                     form.Show();
                 }

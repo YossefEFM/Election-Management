@@ -27,7 +27,8 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select ID from Users where Notconfirmed = Yes";
+            cmd.CommandText = "select ID from Users where NOTCONFIRMMED = :N";
+            cmd.Parameters.Add("N", "y");
             cmd.CommandType = CommandType.Text;
 
             OracleDataReader dr = cmd.ExecuteReader();
@@ -46,19 +47,17 @@ namespace Election_Management_System
             OracleCommand cmd = new OracleCommand();
            
             cmd.Connection = conn;
-            cmd.CommandText = "insert into Users values (:id , :name , :password , :BAddress , :BDate)";
+            cmd.CommandText = "Update Users set NOTCONFIRMMED = :N where ID= :id";
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Add("N", "n");
             cmd.Parameters.Add("id", ID_cmb.SelectedItem);
-            cmd.Parameters.Add("name", Name_txt.Text);
-            cmd.Parameters.Add("password", Password_txt.Text);
-            cmd.Parameters.Add("BAddress", Address_txt.Text);
-            cmd.Parameters.Add("BDate", BD_txt.Text);
             cmd.ExecuteNonQuery();
+            ID_cmb.Items.Remove(ID_cmb.SelectedItem);
+            ID_cmb.SelectedItem = null;
+            MessageBox.Show("Confirmed");
+             
          
-            cmd.CommandText = "Delete from NUsers ID=:id";
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.Add("id", ID_cmb.SelectedItem);
-            cmd.ExecuteNonQuery();
+            
         }
 
         private void Show_btn_Click(object sender, EventArgs e)
@@ -67,7 +66,7 @@ namespace Election_Management_System
             conn.Open ();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select ID , Name , Password , Birthdate , Address from NUsers where ID=:id";
+            cmd.CommandText = "select ID , USERNAME , Password , BDate , GOVERNORATE from Users where ID=:id";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("id", ID_cmb.SelectedItem);
             OracleDataReader dr = cmd.ExecuteReader();

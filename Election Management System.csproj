@@ -110,6 +110,9 @@
     <EmbeddedResource Include="AddnewCandidates.resx">
       <DependentUpon>AddnewCandidates.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Commitee.resx">
+      <DependentUpon>Commitee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="displaycandidates.resx">
       <DependentUpon>displaycandidates.cs</DependentUpon>
     </EmbeddedResource>

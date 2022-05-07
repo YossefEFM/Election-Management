@@ -30,7 +30,7 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select  Constituency  , Name from Candidates ";
+            cmd.CommandText = "select GOVERNORATE  , CANDNAME from Candidates ";
             cmd.CommandType = CommandType.Text;
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -48,18 +48,16 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select * from Candidates where Constituency =:Con ";
+            cmd.CommandText = "select * from Candidates where GOVERNORATE =:Con ";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("Con",Cons_cmb.SelectedItem.ToString());
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                Name_cmb.Items.Add(dr[0].ToString());
-                BD_txt.Text = dr[1].ToString();
-                Add_txt.Text=dr[2].ToString();
-                Cons_cmb.Items.Add(dr[3].ToString());
-                Elc_txt.Text = dr[4].ToString();
-                Bus_txt.Text = dr[5].ToString();
+                Name_txt.Text = dr[1].ToString();
+                Add_txt.Text=dr[4].ToString();
+                Elc_txt.Text = dr[2].ToString();
+                Bus_txt.Text = dr[3].ToString();
             }
             dr.Close();
         }
@@ -70,18 +68,17 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select * from Candidates where Name =:name ";
+            cmd.CommandText = "select * from Candidates where CANDNAME =:name ";
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                Name_cmb.Items.Add(dr[0].ToString());
-                BD_txt.Text = dr[1].ToString();
-                Add_txt.Text = dr[2].ToString();
-                Cons_cmb.Items.Add(dr[3].ToString());
-                Elc_txt.Text = dr[4].ToString();
-                Bus_txt.Text = dr[5].ToString();
+
+                Name_txt.Text = dr[1].ToString();
+                Add_txt.Text = dr[4].ToString();
+                Elc_txt.Text = dr[2].ToString();
+                Bus_txt.Text = dr[3].ToString();
             }
             dr.Close();
         }

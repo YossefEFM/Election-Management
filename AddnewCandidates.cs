@@ -26,7 +26,7 @@ namespace Election_Management_System
         {
             string ordb = "Data Source=orcl;User Id=scott;password=tiger;";
             string cmdstr = "Select * from Candidates";
-            adapter = new OracleDataAdapter(ordb, cmdstr);
+            adapter = new OracleDataAdapter(cmdstr, ordb);
             set = new DataSet();
             adapter.Fill(set);
             dataGridView1.DataSource = set.Tables[0];

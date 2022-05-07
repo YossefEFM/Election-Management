@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Name_cmb = new System.Windows.Forms.ComboBox();
-            this.BD_txt = new System.Windows.Forms.Label();
+            this.Name_txt = new System.Windows.Forms.Label();
             this.Add_txt = new System.Windows.Forms.Label();
             this.Elc_txt = new System.Windows.Forms.Label();
             this.Bus_txt = new System.Windows.Forms.Label();
@@ -68,9 +68,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 20);
+            this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Birth date";
+            this.label2.Text = "Nane";
             // 
             // label3
             // 
@@ -120,15 +120,15 @@
             this.Name_cmb.Size = new System.Drawing.Size(121, 21);
             this.Name_cmb.TabIndex = 8;
             // 
-            // BD_txt
+            // Name_txt
             // 
-            this.BD_txt.AutoSize = true;
-            this.BD_txt.BackColor = System.Drawing.Color.Snow;
-            this.BD_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BD_txt.Location = new System.Drawing.Point(186, 95);
-            this.BD_txt.Name = "BD_txt";
-            this.BD_txt.Size = new System.Drawing.Size(0, 20);
-            this.BD_txt.TabIndex = 9;
+            this.Name_txt.AutoSize = true;
+            this.Name_txt.BackColor = System.Drawing.Color.Snow;
+            this.Name_txt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_txt.Location = new System.Drawing.Point(186, 95);
+            this.Name_txt.Name = "Name_txt";
+            this.Name_txt.Size = new System.Drawing.Size(0, 20);
+            this.Name_txt.TabIndex = 9;
             // 
             // Add_txt
             // 
@@ -195,7 +195,7 @@
             this.Controls.Add(this.Bus_txt);
             this.Controls.Add(this.Elc_txt);
             this.Controls.Add(this.Add_txt);
-            this.Controls.Add(this.BD_txt);
+            this.Controls.Add(this.Name_txt);
             this.Controls.Add(this.Name_cmb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
@@ -204,7 +204,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Name);
             this.Controls.Add(this.Cons_cmb);
-            // this.Name = "Candidates";
+            //this.Name = "Candidates";
             this.Text = "Candidates";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DisCandidates_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -223,7 +223,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox Name_cmb;
-        private System.Windows.Forms.Label BD_txt;
+        private System.Windows.Forms.Label Name_txt;
         private System.Windows.Forms.Label Add_txt;
         private System.Windows.Forms.Label Elc_txt;
         private System.Windows.Forms.Label Bus_txt;
