@@ -13,10 +13,10 @@ namespace Election_Management_System
 {
     public partial class Commitee : Form
     {
-        String ID;
+        int ID;
         string ordb = "Data Source = orcl ; User Id = SCOTT ; password = tiger;";
         OracleConnection conn;
-        public Commitee(String id)
+        public Commitee(int id)
         {
             InitializeComponent();
             ID = id;
@@ -29,8 +29,9 @@ namespace Election_Management_System
 
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
-            cmd.CommandText = "select USERNAME from Users where ID= :id";
+            cmd.CommandText = "select USERNAME from USERS where ID = :id";
             cmd.CommandType = CommandType.Text;
+            cmd.Parameters.Clear();
             cmd.Parameters.Add("id", ID);
             OracleDataReader dr = cmd.ExecuteReader();
             dr.Read();

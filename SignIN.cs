@@ -44,7 +44,7 @@ namespace Election_Management_System
                 }
                 else if(title.Equals("C"))
                 {
-                    Commitee comm = new Commitee(Id_txt.ToString());
+                    Commitee comm = new Commitee(Convert.ToInt32(Id_txt.Text.ToString()));
                     this.Close();
                     comm.Show();
                 }

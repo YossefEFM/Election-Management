@@ -54,7 +54,7 @@ namespace Election_Management_System
 
         private void RR_btn_Click(object sender, EventArgs e)
         {
-
+           
         }
 
         private void Signoout_btn_Click(object sender, EventArgs e)

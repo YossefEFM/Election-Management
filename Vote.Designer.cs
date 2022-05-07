@@ -35,6 +35,8 @@
             this.Show_btn = new System.Windows.Forms.Button();
             this.Vote_btn = new System.Windows.Forms.Button();
             this.Welcome = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -106,12 +108,34 @@
             this.Welcome.Size = new System.Drawing.Size(0, 20);
             this.Welcome.TabIndex = 8;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 134);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Elctoralcode";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Business";
+            // 
             // Vote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Welcome);
             this.Controls.Add(this.Vote_btn);
             this.Controls.Add(this.Show_btn);
@@ -122,7 +146,6 @@
             this.Name = "Vote";
             this.Text = "Vote";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Vote_FormClosing);
-            this.Load += new System.EventHandler(this.Vote_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +159,7 @@
         private System.Windows.Forms.Button Show_btn;
         private System.Windows.Forms.Button Vote_btn;
         private System.Windows.Forms.Label Welcome;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

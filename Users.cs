@@ -33,19 +33,16 @@ namespace Election_Management_System
                 cmd.ExecuteNonQuery();
                 Id = Convert.ToInt32( id);
                 Signed_lbl.Text = "Signed in";
+                Action_cmb.Items.Remove("Register");
             }
             else
             {
                 Signed_lbl.Text = "You are not signed in till now";
+                Action_cmb.Items.Add("Register");
             }
            
         }
-        public void signed(int c , string id)
-        {
-
-           
-        }
-
+     
         private void Go_btn_Click(object sender, EventArgs e)
         {
             String choice = Action_cmb.SelectedItem.ToString();
@@ -66,6 +63,7 @@ namespace Election_Management_System
                 cmd.CommandType = CommandType.Text;
                 cmd.ExecuteNonQuery();
                 Signed_lbl.Text = "Signed Out";
+                Action_cmb.Items.Add("Register");
             }
             else if(choice.Equals("Sign In"))
             {
@@ -99,6 +97,10 @@ namespace Election_Management_System
             {
                 Candidates form = new Candidates();
                 form.Show();
+            }
+            else if(choice.Equals("View Result"))
+            {
+               
             }
         }
 

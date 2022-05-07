@@ -15,6 +15,7 @@ namespace Election_Management_System
     {
         string ordb = "Data Source = orcl ;User Id=SCOTT ; password = tiger;";
         OracleConnection conn;
+       
         string add;
         int Nid;
         String uname;
@@ -23,12 +24,7 @@ namespace Election_Management_System
         {
             InitializeComponent();
             add = address;
-            Nid= Id;    
-        }
-
-        private void Vote_Load(object sender, EventArgs e)
-        {
-           
+            Nid= Id;
             conn = new OracleConnection(ordb);
             conn.Open();
 
@@ -42,18 +38,21 @@ namespace Election_Management_System
             {
                 Name_cmb.Items.Add(dr[0]);
             }
-            
-          
-            cmd.CommandText = "Select USERNAME from Users where ID = :id";
-            cmd.Parameters.Add("id", Nid);
-            cmd.CommandType = CommandType.Text;
-            OracleDataReader ex = cmd.ExecuteReader();
+            dr.Close();
+            OracleCommand cmd1 = new OracleCommand();
+            cmd1.Connection = conn;
+
+            cmd1.CommandText = "Select USERNAME from Users where ID = :id";
+            cmd1.Parameters.Add("id", Id);
+            cmd1.CommandType = CommandType.Text;
+            OracleDataReader ex = cmd1.ExecuteReader();
             ex.Read();
             uname = ex[0].ToString();
-            Welcome.Text = "Welcome" + ex[0].ToString();
-            dr.Close();ex.Close();
-
+            Welcome.Text = "Welcome  " + ex[0].ToString();
+             ex.Close();
         }
+
+  
 
         private void Show_btn_Click(object sender, EventArgs e)
         {
@@ -84,28 +83,47 @@ namespace Election_Management_System
                 cmd.CommandText = "Select Voted from Users where USERNAME = :name";
                 cmd.Parameters.Add("name", uname);
                 OracleDataReader dr0 = cmd.ExecuteReader();
+                dr0.Read();
                 String voted = dr0[0].ToString();
                 dr0.Close();
-                if(voted.Equals("NotVoted"))
-                {
-                cmd.CommandText = "Select Numberofvotes from VOTINGVALUES where CANDNAME = :name ";
-                cmd.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
-                OracleDataReader dr = cmd.ExecuteReader();
-                int num = Convert.ToInt32(dr[0].ToString());
-                dr.Close();
-                num++;
                 
-                cmd.CommandText = "insert into votingvalues (:Name , :Electoralcode , :Zone , :Numberofvoting)";
-                cmd.Parameters.Add("Name", Name_cmb.SelectedItem.ToString());
-                cmd.Parameters.Add("Electoralcode", Sh_lbl.Text);
-                cmd.Parameters.Add("Zone", add);
-                cmd.Parameters.Add("Numberofvoting", num.ToString());
-                cmd.CommandType = CommandType.Text;
-                cmd.ExecuteNonQuery();
-                }
+
+                if(voted.Equals("n"))
+                {
+                OracleCommand cmd1 = new OracleCommand();
+                cmd1.Connection = conn;
+                cmd1.CommandText = "select NUMBEROFVOTES from VOTINGVALUES where CANDNAME = :name ";
+                cmd1.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
+                OracleDataReader r = cmd.ExecuteReader();
+                r.Read();
+                string num = r[0].ToString();
+                r.Close();
+                int x = Convert.ToInt32(num);
+                x++;
+               
+                cmd1.CommandText = @"update VOTINGVALUES set NUMBEROFVOTES= :Numberofvoting where CANDNAME = :name ";
+                cmd1.Parameters.Add("Numberofvoting", x);
+                cmd1.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
+                cmd1.CommandType = CommandType.Text;
+                cmd1.ExecuteNonQuery();
+
+                OracleCommand cmd2 = new OracleCommand();
+                cmd2.Connection = conn;
+                cmd2.CommandText = @"update USERS set VOTED= :vote where ID = :id ";
+                cmd2.Parameters.Add("vote", "y");
+                cmd2.Parameters.Add("id", Nid);
+                cmd2.CommandType = CommandType.Text;
+                cmd2.ExecuteNonQuery();
+                MessageBox.Show("Done!!!!!!!");
+            }
+            
+            else if(voted.Equals("y"))
+            {
+                MessageBox.Show("You can not vote again ");
+            }
             else
             {
-                MessageBox.Show("You are try choose more than (2) and this not illegable");
+                MessageBox.Show("You are not allowed to vote ");
             }
 
 

@@ -64,9 +64,9 @@
             this.Action_cmb.Items.AddRange(new object[] {
             "View Candidates",
             "Vote",
+            "View Result",
             "Sign In",
-            "Sign Out",
-            "Register"});
+            "Sign Out"});
             this.Action_cmb.Location = new System.Drawing.Point(200, 101);
             this.Action_cmb.Name = "Action_cmb";
             this.Action_cmb.Size = new System.Drawing.Size(121, 28);
