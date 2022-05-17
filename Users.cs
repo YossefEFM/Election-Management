@@ -106,7 +106,7 @@ namespace Election_Management_System
 
         private void Users_FormClosing(object sender, FormClosingEventArgs e)
         {
-            conn.Dispose();
+             conn.Dispose();
         }
     }
 }

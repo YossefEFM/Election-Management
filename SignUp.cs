@@ -23,27 +23,29 @@ namespace Election_Management_System
 
         private void Rigester_btn_Click(object sender, EventArgs e)
         {
-            conn = new OracleConnection(ordb);
-            conn.Open();
+         
 
             if(Pass_txt.Text.Equals(ConPass_txt.Text))
-            {
+            {   
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = @"insert into Users values (:id , :name , :password , :BAddress , :BDate , :Notconfirmed , :signed , :Voted , :Job) ";
+                cmd.CommandText = @"INSERT INTO USERS VALUES (ID = :id , USERNAME = :name ,PASSWORD = :password ,GOVERNORATE = :BAddress ,BDATE = :BDate ,NOTCONFIRMED = :Notconfirmed ,SIGNED = :signed , VOTED = :Voted , JOBTITLE = :Job) ";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.Clear();
-                cmd.Parameters.Add("id", ID_txt.Text);
+                cmd.Parameters.Add("id", Convert.ToInt32(ID_txt.Text));
                 cmd.Parameters.Add("name", Name_txt.Text);
                 cmd.Parameters.Add("Pass", Pass_txt.Text);
                 cmd.Parameters.Add("BAddress", Address_txt.Text);
                 cmd.Parameters.Add("BDate", Convert.ToDateTime(Birth_txt.Text.ToString()));
-                cmd.Parameters.Add("Notconfirmed", "Yes");
-                cmd.Parameters.Add("Notconfirmed", "Signed Out");
-                cmd.Parameters.Add("Voted", "NotVoted");
-                cmd.Parameters.Add("Voted", "Voter");
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Rigesteration done to confirm");
+                cmd.Parameters.Add("Notconfirmed", 'n');
+                cmd.Parameters.Add("Notconfirmed", 'n');
+                cmd.Parameters.Add("Voted", 'n');
+                cmd.Parameters.Add("Voted", 'V');
+                int r =cmd.ExecuteNonQuery();
+                if (r != -1)
+                    MessageBox.Show("Rigesteration done to confirm");
+                else
+                    MessageBox.Show("Rigesteration not happened!!!!!!!!!!");
             }
             else
             {
@@ -55,6 +57,12 @@ namespace Election_Management_System
         private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {         conn = new OracleConnection(ordb);
+                 conn.Open();
+
         }
     }
 }

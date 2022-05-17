@@ -15,7 +15,7 @@ namespace Election_Management_System
     {
         string ordb = "Data Source = orcl ;User Id=SCOTT ; password = tiger;";
         OracleConnection conn;
-       
+        OracleConnection conn1;
         string add;
         int Nid;
         String uname;
@@ -73,9 +73,32 @@ namespace Election_Management_System
             }
             dr.Close();
         }
-
+        private int num_votes(string name)
+        {
+            conn1 = new OracleConnection(ordb);
+            conn1.Open();
+            OracleCommand cmd1 = new OracleCommand();
+            cmd1.Connection = conn1;
+            cmd1.CommandText = @"select NUMBEROFVOTES from VOTINGVALUES where CANDNAME =:name ";
+            cmd1.Parameters.Add("name",name);
+            OracleDataReader r = cmd1.ExecuteReader();
+            int x = 0;
+            if (r.Read())
+            {
+                String num = r["NUMBEROFVOTES"].ToString();
+                x = Convert.ToInt32(num);
+                x++;
+                r.Close();
+            }
+            else
+            {
+                MessageBox.Show("No data found!!!!!!");
+            }
+            return x;
+        }
         private void Vote_btn_Click(object sender, EventArgs e)
         {
+                string name = Name_cmb.SelectedItem.ToString();
                 conn = new OracleConnection(ordb);
                 conn.Open();
                 OracleCommand cmd = new OracleCommand();
@@ -86,26 +109,17 @@ namespace Election_Management_System
                 dr0.Read();
                 String voted = dr0[0].ToString();
                 dr0.Close();
-                
+            
 
                 if(voted.Equals("n"))
                 {
-                OracleCommand cmd1 = new OracleCommand();
-                cmd1.Connection = conn;
-                cmd1.CommandText = "select NUMBEROFVOTES from VOTINGVALUES where CANDNAME = :name ";
-                cmd1.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
-                OracleDataReader r = cmd.ExecuteReader();
-                r.Read();
-                string num = r[0].ToString();
-                r.Close();
-                int x = Convert.ToInt32(num);
-                x++;
-               
-                cmd1.CommandText = @"update VOTINGVALUES set NUMBEROFVOTES= :Numberofvoting where CANDNAME = :name ";
-                cmd1.Parameters.Add("Numberofvoting", x);
-                cmd1.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
-                cmd1.CommandType = CommandType.Text;
-                cmd1.ExecuteNonQuery();
+                
+                int X = num_votes(name);
+                cmd.CommandText = @"update VOTINGVALUES set NUMBEROFVOTES= :Numberofvoting where CANDNAME = :name ";
+                cmd.Parameters.Add("Numberofvoting", X);
+                cmd.Parameters.Add("name", Name_cmb.SelectedItem.ToString());
+                cmd.CommandType = CommandType.Text;
+                cmd.ExecuteNonQuery();
 
                 OracleCommand cmd2 = new OracleCommand();
                 cmd2.Connection = conn;
@@ -132,6 +146,7 @@ namespace Election_Management_System
         private void Vote_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
+            conn1.Dispose();
         }
     }
 }
