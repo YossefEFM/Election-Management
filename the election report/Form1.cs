@@ -18,7 +18,7 @@ namespace the_election_report
     {
         string ordb = " Data Source =orcl;User Id = hr;Password= hr;";
         OracleConnection conn;
-        CrystalReport1 cr;
+        electionReport cr;
 
         public Form1()
         {
@@ -30,7 +30,7 @@ namespace the_election_report
         private void Form1_Load(object sender, EventArgs e)
         {
            
-            cr = new CrystalReport1();
+            cr = new electionReport();
             crystalReportViewer1.ReportSource = cr;
 
 
