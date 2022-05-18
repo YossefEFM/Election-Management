@@ -34,11 +34,13 @@ namespace Election_Management_System
                 Id = Convert.ToInt32( id);
                 Signed_lbl.Text = "Signed in";
                 Action_cmb.Items.Remove("Register");
+                Action_cmb.Items.Remove("Sign In");
             }
             else
             {
                 Signed_lbl.Text = "You are not signed in till now";
                 Action_cmb.Items.Add("Register");
+                Action_cmb.Items.Add("Sign In");
             }
            
         }

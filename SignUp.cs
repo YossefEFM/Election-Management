@@ -29,21 +29,25 @@ namespace Election_Management_System
             {   
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
-                cmd.CommandText = @"INSERT INTO USERS VALUES (ID = :id , USERNAME = :name ,PASSWORD = :password ,GOVERNORATE = :BAddress ,BDATE = :BDate ,NOTCONFIRMED = :Notconfirmed ,SIGNED = :signed , VOTED = :Voted , JOBTITLE = :Job) ";
+                cmd.CommandText = @"INSERT INTO USERS VALUES (:id , :name ,:password ,:BAddress ,:BDate ,:Notconfirmed ,:signed , :Voted , :Job) ";
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Clear();
-                cmd.Parameters.Add("id", Convert.ToInt32(ID_txt.Text));
+                //cmd.Parameters.Clear(); 
+                int ID = Convert.ToInt32(ID_txt.Text);
+                DateTime dateTime = Convert.ToDateTime(Birth_txt.Text);
+                String N = "n";
+                String V = "V";
+                cmd.Parameters.Add("id", ID);
                 cmd.Parameters.Add("name", Name_txt.Text);
-                cmd.Parameters.Add("Pass", Pass_txt.Text);
+                cmd.Parameters.Add("Password", Pass_txt.Text);
                 cmd.Parameters.Add("BAddress", Address_txt.Text);
-                cmd.Parameters.Add("BDate", Convert.ToDateTime(Birth_txt.Text.ToString()));
-                cmd.Parameters.Add("Notconfirmed", 'n');
-                cmd.Parameters.Add("Notconfirmed", 'n');
-                cmd.Parameters.Add("Voted", 'n');
-                cmd.Parameters.Add("Voted", 'V');
+                cmd.Parameters.Add("BDate",dateTime);
+                cmd.Parameters.Add("Notconfirmed", N);
+                cmd.Parameters.Add("signed", N);
+                cmd.Parameters.Add("Voted", N);
+                cmd.Parameters.Add("Job", V);
                 int r =cmd.ExecuteNonQuery();
-                if (r != -1)
-                    MessageBox.Show("Rigesteration done to confirm");
+                if(r != -1)
+                MessageBox.Show("Rigesteration done to confirm");
                 else
                     MessageBox.Show("Rigesteration not happened!!!!!!!!!!");
             }

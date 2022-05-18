@@ -65,7 +65,6 @@
             "View Candidates",
             "Vote",
             "View Result",
-            "Sign In",
             "Sign Out"});
             this.Action_cmb.Location = new System.Drawing.Point(200, 101);
             this.Action_cmb.Name = "Action_cmb";
