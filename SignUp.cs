@@ -36,18 +36,19 @@ namespace Election_Management_System
                 DateTime dateTime = Convert.ToDateTime(Birth_txt.Text);
                 String N = "n";
                 String V = "V";
+                String Y = "y";
                 cmd.Parameters.Add("id", ID);
                 cmd.Parameters.Add("name", Name_txt.Text);
                 cmd.Parameters.Add("Password", Pass_txt.Text);
                 cmd.Parameters.Add("BAddress", Address_txt.Text);
                 cmd.Parameters.Add("BDate",dateTime);
-                cmd.Parameters.Add("Notconfirmed", N);
+                cmd.Parameters.Add("Notconfirmed", Y);
                 cmd.Parameters.Add("signed", N);
                 cmd.Parameters.Add("Voted", N);
                 cmd.Parameters.Add("Job", V);
                 int r =cmd.ExecuteNonQuery();
                 if(r != -1)
-                MessageBox.Show("Rigesteration done to confirm");
+                     MessageBox.Show("Rigesteration done to confirm");
                 else
                     MessageBox.Show("Rigesteration not happened!!!!!!!!!!");
             }

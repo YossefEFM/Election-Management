@@ -29,3 +29,29 @@ C:\Users\Jana\source\repos\the election report\the election report\obj\Debug\the
 C:\Users\Jana\source\repos\the election report\the election report\bin\Debug\AxShockwaveFlashObjects.dll
 C:\Users\Jana\source\repos\the election report\the election report\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\Jana\source\repos\the election report\the election report\bin\Debug\ShockwaveFlashObjects.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\the election report.exe.config
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\the election report.exe
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\the election report.pdb
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\ShockwaveFlashObjects.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\stdole.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the election report.csproj.AssemblyReference.cache
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the election report.csproj.SuggestedBindingRedirects.cache
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the_election_report.Form1.resources
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the_election_report.Properties.Resources.resources
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the election report.csproj.GenerateResource.cache
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the election report.csproj.CoreCompileInputs.cache
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the election report.csproj.CopyComplete
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the election report.exe
+I:\visualprojects\Election-Management-main\Election-Management\the election report\obj\Debug\the election report.pdb

@@ -38,10 +38,5 @@ namespace Election_Management_System
             builder = new OracleCommandBuilder(adapter);
             adapter.Update(set.Tables[0]);
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

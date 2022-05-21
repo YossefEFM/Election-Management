@@ -66,6 +66,7 @@ namespace Election_Management_System
                 cmd.ExecuteNonQuery();
                 Signed_lbl.Text = "Signed Out";
                 Action_cmb.Items.Add("Register");
+                Action_cmb.Items.Add("Sign In");
             }
             else if(choice.Equals("Sign In"))
             {
@@ -102,7 +103,7 @@ namespace Election_Management_System
             }
             else if(choice.Equals("View Result"))
             {
-               
+             
             }
         }
 

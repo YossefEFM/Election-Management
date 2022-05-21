@@ -68,9 +68,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 20);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Nane";
+            this.label2.Text = "Name";
             // 
             // label3
             // 

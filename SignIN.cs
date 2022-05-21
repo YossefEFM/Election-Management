@@ -61,7 +61,6 @@ namespace Election_Management_System
         {
             SignUp reg = new SignUp();
             reg.Visible = true;
-
             this.Visible = false;
         }
 
